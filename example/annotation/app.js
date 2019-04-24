@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Init wavesurfer
     wavesurfer = WaveSurfer.create({
         container: '#waveform',
-        height: 100,
+        height: 200,
         pixelRatio: 1,
         scrollParent: true,
         normalize: true,
@@ -36,10 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             url: 'rashomon.json'
         })
         .on('success', function(data) {
-            wavesurfer.load(
-                'http://www.archive.org/download/mshortworks_001_1202_librivox/msw001_03_rashomon_akutagawa_mt_64kb.mp3',
-                data
-            );
+            wavesurfer.load('./boo_boo_dragon.mp3', data);
         });
 
     /* Regions */
