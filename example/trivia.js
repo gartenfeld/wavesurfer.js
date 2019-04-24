@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navbar links
     var ul = document.querySelector('.nav-pills');
+    if (!ul) {
+        return;
+    }
     var pills = ul.querySelectorAll('li');
     var active = pills[0];
     if (location.search) {
